@@ -8,8 +8,8 @@ const Home = (props) => (
   <div>
     <div className="jumbotron jumbotron-fluid">
       <div className="container">
-        <h1 className="title display-1">Looking for words.</h1>
-        <p className="lead">Something something.</p>
+        <h1 className="title display-1">Looking for words?</h1>
+        <p className="lead mt-5">Here you can find some.</p>
       </div>
     </div>
     <div className="container">

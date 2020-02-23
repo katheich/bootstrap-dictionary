@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { HashRouter, Switch, Route } from 'react-router-dom'
+import { HashRouter, Switch, Route, Redirect } from 'react-router-dom'
 
 import './styles/style.scss'
 
@@ -13,6 +13,7 @@ const App = () => (
   <HashRouter>
     <Navbar />
     <Switch>
+      <Redirect from='/reroute/:q' to='/search/:q' />
       <Route exact path="/" render={(props) => <Home {...props} />} />
       <Route exact path="/search/:q" component={WordPage} />
     </Switch>

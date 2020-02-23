@@ -59,21 +59,23 @@ const WordPage = (props) => {
                     {elem.hwi.prs && <p>[{elem.hwi.prs[0].mw}]</p>}
 
                     {elem.lbs && elem.lbs.map((label, i) => {
-                      return <p key={i}>
+                      return <div className="small font-weight-light" key={i}>
                         {label}
-                      </p>
+                      </div>
                     })}
 
-                    {elem.ins && elem.ins.map((infl, i) => {
-                      return <span key={i}>
-                        {infl.if}{i === elem.ins.length ? '' : ', '} 
-                      </span>
-                    })}
+                    {elem.ins && <div><em>also </em> 
+                      {elem.ins.map((infl, i) => {
+                        return <span key={i}>
+                          {infl.if}{i === elem.ins.length - 1 ? '' : ', '}
+                        </span>
+                      })}
+                    </div>}
 
                     <div className="h7 font-weight-bold mt-3">Definitions</div>
                     {elem.shortdef.map((def, i) => {
                       return <p className="small font-weight-light my-1" key={i}>
-                        {i+1}. {def}
+                        { i + 1 }. {def}
                       </p>
                     })}
 
