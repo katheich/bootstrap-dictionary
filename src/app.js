@@ -1,17 +1,19 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { BrowserRouter, Switch, Route } from 'react-router-dom'
+import { HashRouter, Switch, Route } from 'react-router-dom'
 
 import './styles/style.scss'
 
 import Home from './components/Home'
+import WordPage from './components/WordPage'
 
 const App = () => (
-  <BrowserRouter>
+  <HashRouter>
     <Switch>
-      <Route exact path="/" component={Home} />
+      <Route exact path="/" render={(props) => <Home {...props} />} />
+      <Route exact path="/search/:q" component={WordPage} />
     </Switch>
-  </BrowserRouter>
+  </HashRouter>
 )
 
 
