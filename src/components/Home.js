@@ -12,7 +12,9 @@ const Home = (props) => (
         <p className="lead">Something something.</p>
       </div>
     </div>
-    <WordSearch props={props} />
+    <div className="container">
+      <WordSearch props={props} size={'large'} />
+    </div>
   </div>
 )
 
