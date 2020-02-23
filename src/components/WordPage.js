@@ -24,7 +24,7 @@ const WordPage = (props) => {
         <div className="container">
           <h1 className="text-capitalize display-5">{props.match.params.q}</h1>
 
-          {data.length === 0 ? 'No match could be found.' : 
+          {data.length === 0 ? 'Sorry, no match could be found.' : 
           
             <div className="font-weight-light">
               [{data[0].hwi.prs[0].mw}] 
