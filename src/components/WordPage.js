@@ -40,13 +40,14 @@ const WordPage = (props) => {
       <div className="container">
         <div className="row">
           <div className="col-4">
-            <div className="list-group list-group-flush sticky-top">
+            <div className="list-group list-group-flush sticky-top" id="list" >
               {data.length === 0 ? '' : 
             
                 data.map((elem, i) => {
 
                   return <Link 
                     key={i} 
+                    spy={true}
                     smooth={true}
                     className="list-group-item list-group-item-action" 
                     to={`myScrollToElement${i}`}>
@@ -57,21 +58,21 @@ const WordPage = (props) => {
               }
             </div>
           </div>
-          <div className="col-8">
-            <div id="list" data-spy="scroll" data-target="#list" data-offset="0" className="scrollspy-example">
+          <div className="col-8" data-spy="scroll" data-target="#list" id="definitions">
+            <div data-offset="0" className="scrollspy-example">
 
               {data.length === 0 ? '' : 
               
                 data.map((elem, i) => {
                   
                   return <Element key={i} name={`myScrollToElement${i}`}>
-                    <div className="mb-5">
-                      <div className="h2 title">
-                        {elem.hwi.hw}
+                    <div className="pb-5">
+                      <div className="h2 title mb-1">
+                        {elem.hwi.hw} 
                       </div>
-                      <em>{elem.fl}</em>
-                      <br />
-                      {elem.hwi.prs && <p>[{elem.hwi.prs[0].mw}]</p>}
+                      <div className="h6 mt-0 mb-3"><em>{elem.fl}</em></div>
+
+                      {elem.hwi.prs && <div>[{elem.hwi.prs[0].mw}]</div>}
 
                       {elem.lbs && elem.lbs.map((label, i) => {
                         return <div className="small font-weight-light" key={i}>
@@ -90,9 +91,9 @@ const WordPage = (props) => {
 
                       <div className="h7 font-weight-bold mt-3">Definitions</div>
                       {elem.shortdef.map((def, i) => {
-                        return <p className="small font-weight-light my-1" key={i}>
+                        return <div className="small font-weight-light my-1" key={i}>
                           { i + 1 }. {def}
-                        </p>
+                        </div>
                       })}
                     </div>
                   </Element>

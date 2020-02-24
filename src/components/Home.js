@@ -7,8 +7,10 @@ import WordSearch from './WordSearch'
 const Home = (props) => (
   <div>
     <div className="jumbotron jumbotron-fluid">
-      <div className="container">
-        <h1 className="title display-3">Looking for words?</h1>
+      <div className="container typewriter">
+        <h1 className="title display-3">
+          <p>Looking for words?</p>
+        </h1>
         <p className="lead mt-5">Here you can find some.</p>
       </div>
     </div>
