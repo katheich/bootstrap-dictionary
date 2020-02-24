@@ -100,8 +100,8 @@ const WordPage = (props) => {
                     smooth={true}
                     className="list-group-item list-group-item-action" 
                     to={`myScrollToElement${i}`}>
-                    <span className="font-weight-bold">
-                      {elem.hwi.hw}</span>, {elem.fl}
+                    <span className="font-weight-bold d-inline">
+                      {elem.hwi.hw}</span><span className="d-none d-md-inline">, {elem.fl}</span>
                   </ScrollLink>
                 })
               }
