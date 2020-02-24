@@ -54,7 +54,7 @@ const WordPage = (props) => {
       {console.log('DATA', data)}
       <div className="jumbotron jumbotron-fluid">
         <div className="container">
-          <h1 className="text-capitalize display-5 title">{!loading && data[0].hwi ? data[0].hwi.hw : props.match.params.q}</h1>
+          <h1 className="display-5 title">{!loading && data[0].hwi ? data[0].hwi.hw : props.match.params.q}</h1>
 
           {loading ? <div className="spinner-border" role="status">
             <span className="sr-only">Loading...</span>
