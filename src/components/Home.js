@@ -21,7 +21,7 @@ const Home = (props) => {
           }, i * typingSpeed)
         })( i + 1 ,text[i])
       }
-    }, 1500)
+    }, 1000)
   }
   
 
