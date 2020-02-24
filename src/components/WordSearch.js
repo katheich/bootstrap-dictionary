@@ -12,6 +12,7 @@ const WordSearch = ({ props, size }) => {
     e.preventDefault()
     if (keyword) {
       const path = `/reroute/${keyword}`
+      setKeyword('')
       props.history.push(path)
     } 
     

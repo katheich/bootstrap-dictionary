@@ -22,7 +22,7 @@ const WordPage = (props) => {
       {console.log(data)}
       <div className="jumbotron jumbotron-fluid">
         <div className="container">
-          <h1 className="text-capitalize display-5">{props.match.params.q}</h1>
+          <h1 className="text-capitalize display-5 title">{props.match.params.q}</h1>
 
           {data.length === 0 ? 'Sorry, no match could be found.' : 
           
@@ -66,7 +66,7 @@ const WordPage = (props) => {
                   
                   return <Element key={i} name={`myScrollToElement${i}`}>
                     <div className="mb-5">
-                      <div className="h2">
+                      <div className="h2 title">
                         {elem.hwi.hw}
                       </div>
                       <em>{elem.fl}</em>
