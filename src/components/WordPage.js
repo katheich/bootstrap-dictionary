@@ -38,15 +38,14 @@ const WordPage = (props) => {
       subdirectory = audio[0]
     }
 
-    const path = `https://media.merriam-webster.com/soundc11/${subdirectory}/${audio}.wav` 
-    return path
+    return `https://media.merriam-webster.com/soundc11/${subdirectory}/${audio}.wav` 
   }
 
   function playSound(e, audio) {
     e.preventDefault()
     const path = determineAudioFile(audio)
-    audio = new Audio(path)
-    audio.play()
+    const sound = new Audio(path)
+    sound.play()
   }
 
   return (
@@ -110,7 +109,7 @@ const WordPage = (props) => {
               }
             </div>
           </div>
-          
+
           <div className="col-8" data-spy="scroll" data-target="#list" id="definitions">
             <div data-offset="0" className="scrollspy-example">
 
