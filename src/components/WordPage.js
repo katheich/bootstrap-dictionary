@@ -55,7 +55,7 @@ const WordPage = (props) => {
           {data.length === 0 || !data[0].hwi ? 'Sorry, no match could be found.' : 
           
             <div className="font-weight-light">
-              [{data[0].hwi.prs[0].mw}] 
+              {data[0].hwi.prs && `[${data[0].hwi.prs[0].mw}]` } 
               <br />
               <br />
               <em>{data[0].fl}.</em>
