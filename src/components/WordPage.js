@@ -90,9 +90,6 @@ const WordPage = (props) => {
           </> : ''
         }
 
-        
-
-
         <div className="row">
           <div className="col-4">
             <div className="list-group list-group-flush sticky-top" id="list" >
@@ -113,6 +110,7 @@ const WordPage = (props) => {
               }
             </div>
           </div>
+          
           <div className="col-8" data-spy="scroll" data-target="#list" id="definitions">
             <div data-offset="0" className="scrollspy-example">
 
@@ -126,7 +124,6 @@ const WordPage = (props) => {
                         {elem.hwi.hw} 
                       </div>
                       <div className="h6 mt-0 mb-3"><em>{elem.fl}</em></div>
-
 
                       {elem.hwi.prs && <div className="flex-row">
                         <div className="d-inline-flex">
