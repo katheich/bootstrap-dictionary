@@ -91,6 +91,14 @@ footer {
   }
 }
 
+.form-inline {
+  display: flex;
+  flex-flow: row nowrap;
+  .btn {
+    margin-left: 3px;
+  }
+}
+
 html {
   font-size: 0.8rem;
 }
