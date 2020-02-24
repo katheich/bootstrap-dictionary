@@ -67,8 +67,7 @@ const WordPage = (props) => {
       
       <div className="container">
 
-        {data.length !== 0 && data[0].hwi ? console.log('good data') : 
-          <>
+        {data.length !== 0 && !data[0].hwi ? <>
             <div className="h4 title">Did you mean any of the following?</div>
           
             <div className="list-group list-group-horizontal d-flex flex-wrap">
@@ -76,13 +75,13 @@ const WordPage = (props) => {
                 return <Link
                   key={i}
                   to={`/reroute/${elem}`}
-                  className="list-group-item justify-content-between flex-grow-1 border-0"
+                  className="list-group-item justify-content-start border-0"
                 >
                   {elem}
                 </Link>
               })}
             </div>
-          </>
+          </> : ''
         }
 
         
