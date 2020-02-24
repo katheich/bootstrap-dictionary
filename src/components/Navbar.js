@@ -6,7 +6,7 @@ import WordSearch from './WordSearch'
 
 const Navbar = (props) => (
 
-  <nav className="navbar navbar-light bg-light">
+  <nav className="navbar navbar-light">
     <Link className="navbar-brand title" to="/">Looking for a word?</Link>
     <WordSearch size={'small'} props={props} />
   </nav>
