@@ -18,11 +18,18 @@ $font-family-base: 'Montserrat', sans-serif;
 }
 
 html, body {
-  min-height: 100vh;
+  height: 100vh;
 }
 
 #root {
-  min-height: 100vh;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  #homepage {
+    flex-grow: 3;
+  }
 }
 
 .form-control, .btn {

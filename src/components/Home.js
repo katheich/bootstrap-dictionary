@@ -30,7 +30,7 @@ const Home = (props) => {
   }, [])
   
   return (
-    <div>
+    <div id="homepage">
       <div className="jumbotron jumbotron-fluid">
         <div className="container typewriter">
           <h1 className="title display-3">
