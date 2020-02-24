@@ -12,9 +12,9 @@ const env = process.env.NODE_ENV === 'production' ? (
 module.exports = {
   entry: './src/app.js',
   output: {
-    // filename: 'bundle.js',
-    // path: path.resolve('dist'),
-    // publicPath: '/bootstrap-dictionary/'
+    filename: 'bundle.js',
+    path: path.resolve('dist'),
+    publicPath: '/bootstrap-dictionary/'
   },
   module: {
     rules: [
