@@ -11,14 +11,18 @@ const ScrollLink = Scroll.Link
 const WordPage = (props) => {
 
   const [data, setData] = useState([])
+  const [loading, setLoading] = useState(true)
 
   useEffect(() => {
     axios.get(`https://www.dictionaryapi.com/api/v3/references/collegiate/json/${props.match.params.q}?key=${process.env.apiKey}`)
       .then(resp => {
-        console.log('RESPONSE', resp)
         setData(resp.data)
+        setLoading(false)
       })
-      .catch(err => console.log('ERROR', err))
+      .catch(err => {
+        console.log('ERROR', err)
+        setLoading(false)
+      })
   }, [])
 
   function determineAudioFile(audio) {
@@ -50,9 +54,11 @@ const WordPage = (props) => {
       {console.log('DATA', data)}
       <div className="jumbotron jumbotron-fluid">
         <div className="container">
-          <h1 className="text-capitalize display-5 title">{data.length !== 0 && data[0].hwi ? data[0].hwi.hw : props.match.params.q}</h1>
+          <h1 className="text-capitalize display-5 title">{!loading && data[0].hwi ? data[0].hwi.hw : props.match.params.q}</h1>
 
-          {data.length === 0 || !data[0].hwi ? 'Sorry, no match could be found.' : 
+          {loading ? <div className="spinner-border" role="status">
+            <span className="sr-only">Loading...</span>
+          </div> : !data[0].hwi ? 'Sorry, no match could be found.' : 
           
             <div className="font-weight-light">
               {data[0].hwi.prs && `[${data[0].hwi.prs[0].mw}]` } 
@@ -67,7 +73,7 @@ const WordPage = (props) => {
       
       <div className="container">
 
-        {data.length !== 0 && !data[0].hwi ? <>
+        {!loading && !data[0].hwi ? <>
             <div className="h4 title">Did you mean any of the following?</div>
           
             <div className="list-group list-group-horizontal d-flex flex-wrap">
@@ -90,7 +96,7 @@ const WordPage = (props) => {
         <div className="row">
           <div className="col-4">
             <div className="list-group list-group-flush sticky-top" id="list" >
-              {data.length === 0 || !data[0].hwi ? '' : 
+              {loading || !data[0].hwi ? '' : 
             
                 data.map((elem, i) => {
 
@@ -110,7 +116,7 @@ const WordPage = (props) => {
           <div className="col-8" data-spy="scroll" data-target="#list" id="definitions">
             <div data-offset="0" className="scrollspy-example">
 
-              {data.length === 0 || !data[0].hwi ? '' : 
+              {loading || !data[0].hwi ? '' : 
               
                 data.map((elem, i) => {
                   
