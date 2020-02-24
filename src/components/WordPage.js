@@ -50,7 +50,7 @@ const WordPage = (props) => {
       {console.log('DATA', data)}
       <div className="jumbotron jumbotron-fluid">
         <div className="container">
-          <h1 className="text-capitalize display-5 title">{props.match.params.q}</h1>
+          <h1 className="text-capitalize display-5 title">{data.length !== 0 && data[0].hwi ? data[0].hwi.hw : props.match.params.q}</h1>
 
           {data.length === 0 || !data[0].hwi ? 'Sorry, no match could be found.' : 
           
