@@ -4,6 +4,7 @@ const top10 = ['pretentious', 'ubiquitious', 'love', 'cynical', 'apathetic', 'co
 
 import TypingTitle from './TypingTitle'
 import WordSearch from './WordSearch'
+import WordOfTheDay from './WordOfTheDay'
 
 const Home = (props) => {
   
@@ -19,6 +20,7 @@ const Home = (props) => {
       </div>
       <div className="container">
         <WordSearch props={props} size={'large'} />
+        <WordOfTheDay />
       </div>
     </div>
   )
