@@ -20,10 +20,7 @@ const Home = (props) => {
       </div>
       <div className="container row mx-lg-5">
         <div className="col-lg"><WordSearch props={props} size={'large'} /></div>
-        <div className="col-lg"><WordOfTheDay /></div>
-
-        
-        
+        <div className="col-lg"><WordOfTheDay /></div>        
       </div>
     </div>
   )
