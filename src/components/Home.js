@@ -18,9 +18,12 @@ const Home = (props) => {
           <p className="lead mt-5">Here you can find some.</p>
         </div>
       </div>
-      <div className="container">
-        <WordSearch props={props} size={'large'} />
-        <WordOfTheDay />
+      <div className="container row mx-lg-5">
+        <div className="col-lg"><WordSearch props={props} size={'large'} /></div>
+        <div className="col-lg"><WordOfTheDay /></div>
+
+        
+        
       </div>
     </div>
   )
