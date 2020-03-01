@@ -4,7 +4,7 @@ import axios from 'axios'
 import Scroll from 'react-scroll'
 
 const Element = Scroll.Element
-const scroller = Scroll.scroller
+// const scroller = Scroll.scroller
 const ScrollLink = Scroll.Link
 
 

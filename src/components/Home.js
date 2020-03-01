@@ -1,7 +1,5 @@
 import React from 'react'
 
-const top10 = ['pretentious', 'ubiquitious', 'love', 'cynical', 'apathetic', 'conunndrum', 'albeit', 'ambiguous', 'integrity', 'affect']
-
 import TypingTitle from './TypingTitle'
 import WordSearch from './WordSearch'
 import WordOfTheDay from './WordOfTheDay'

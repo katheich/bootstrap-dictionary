@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Footer = (props) => (
+const Footer = () => (
 
   <footer className="row align-items-end text-center small font-weight-light">
     <div className="col">

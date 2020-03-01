@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 import axios from 'axios'
 
 
-const WOTD = (props) => {
+const WOTD = () => {
 
   const [WOTD, setWOTD] = useState('')
 
