@@ -10,4 +10,4 @@ Readme coming soon!
 - React
 - Bootstrap
 - Merriam Webster Collegiate® Dictionary with Audio API
-- Webnik API
+- Wordnik API
