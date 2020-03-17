@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import Scroll from 'react-scroll'
 
 const Element = Scroll.Element
