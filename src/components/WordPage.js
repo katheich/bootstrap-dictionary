@@ -13,7 +13,11 @@ const WordPage = (props) => {
   useEffect(() => {
     axios.get(`https://www.dictionaryapi.com/api/v3/references/collegiate/json/${props.match.params.q}?key=${process.env.apiKey}`)
       .then(resp => {
-        setData(resp.data)
+        if (resp.data.length === 0) {
+          setData( [ 'no suggestions available' ] )
+        } else {
+          setData(resp.data)
+        }
         setLoading(false)
       })
       .catch(err => {
