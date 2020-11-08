@@ -1,6 +1,6 @@
 # Bootstrap Dictionary
 
-Readme coming soon!
+A little React frontend I made for the [Merriam Webster Dictionary API](https://dictionaryapi.com/products/api-collegiate-dictionary) to get myself acquainted with [Bootstrap](https://getbootstrap.com/). Completed over two days in February 2020.
 
 ## Technologies used
 
